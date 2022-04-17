@@ -7,7 +7,7 @@ print("Hello!What is your name?")
 N=input() # name of game user
 N=N[0].upper()+N[1:].lower()
 
-print("Well,I am thinking a number between 1 and 20\n{}".format(b))
+print("Well,{},I am thinking a number between 1 and 20\n{}".format(N,b))
 n=1 #the number of attempts(it must be  max 6)
 
 while True:
