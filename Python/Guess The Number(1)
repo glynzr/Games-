@@ -1,0 +1,28 @@
+#Guess The Number
+from random import randint
+a=randint(1,20) #the number that should be guessed
+b="Take a guess"
+print("Hello!What is your name?")
+
+N=input() # name of game user
+N=N[0].upper()+N[1:].lower()
+
+print("Well,I am thinking a number between 1 and 20\n{}".format(b))
+n=1 #the number of attempts(it must be  max 6)
+
+while True:
+    x=int(input()) # the number that the user enters
+    if x==a:
+        print("Good job,"+N+"!You guessed my number in {} guess".format(n))
+        break
+    else:
+        if x>a: print("Your guess is too high\n{}".format(b))
+
+        else: print("Your guest is too low\n{}".format(b))
+        n+=1
+    if n>6:
+        print("Sorry!Game is over!My number is {}".format(a))
+        break
+
+
+
