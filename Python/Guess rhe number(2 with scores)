@@ -14,7 +14,9 @@ while True:
     x=int(input()) # the number that the user enters
     if x==a:
         score+=100
-        print("Good job,"+N+"!You guessed my number in {} guess".format(n))
+        if n!=1:  print("Good job,"+N+"!You guessed my number in {} guesses".format(n))
+        else:  print("You are brilliant!You guess it in a single guess")
+       
         print("Score:{}".format(score))
         break
     else:
@@ -32,6 +34,3 @@ while True:
     if n>6:
         print("Sorry!Game is over!My number is {}".format(a))
         break
-
-
-
