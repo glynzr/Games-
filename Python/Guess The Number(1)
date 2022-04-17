@@ -2,6 +2,7 @@
 from random import randint
 a=randint(1,20) #the number that should be guessed
 b="Take a guess"
+print(a)
 print("Hello!What is your name?")
 
 N=input() # name of game user
@@ -13,7 +14,10 @@ n=1 #the number of attempts(it must be  max 6)
 while True:
     x=int(input()) # the number that the user enters
     if x==a:
-        print("Good job,"+N+"!You guessed my number in {} guess".format(n))
+        if n!=1:
+            print("Good job,"+N+"!You guessed my number in {} guesses".format(n))
+        else:
+            print("You are brilliant!You guess it in a single guess")
         break
     else:
         if x>a: print("Your guess is too high\n{}".format(b))
@@ -23,6 +27,3 @@ while True:
     if n>6:
         print("Sorry!Game is over!My number is {}".format(a))
         break
-
-
-
